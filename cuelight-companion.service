@@ -1,0 +1,13 @@
+[Unit]
+Description=DSAN CueLight to Companion Bridge
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/cuelight-companion/cuelight_companion.py
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
